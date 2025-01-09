@@ -5,6 +5,7 @@ It analyzes the input time string and returns a corresponding time format layout
 
 [![go-anydate Release](https://img.shields.io/github/release/nodivbyzero/go-anydate.svg)](https://github.com/nodivbyzero/go-anydate/releases)
 [![Go Test](https://github.com/nodivbyzero/go-anydate/actions/workflows/tests.yml/badge.svg)](https://github.com/nodivbyzero/go-anydate/actions)
+[![Doc](https://img.shields.io/badge/go.dev-reference-brightgreen?logo=go&logoColor=white&style=flat)](https://pkg.go.dev/github.com/nodivbyzero/go-anydate)
 [![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
 
