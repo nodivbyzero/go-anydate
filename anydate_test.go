@@ -241,6 +241,9 @@ func TestAnyFormatErr(t *testing.T) {
 
 		{in: "2025-13-26"},
 		{in: "2025-12-32"},
+		{in: "25:01"},
+		{in: "4:60"},
+		{in: "4:35:60"},
 	}
 
 	for _, tt := range tests {

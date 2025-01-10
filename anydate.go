@@ -521,6 +521,36 @@ func (d *adDetector) extractPattern(input string) (string, error) {
 			return "", ErrInvalidDateFormat
 		}
 	}
+	hourIndex, hourAdded := componentsMap[ctHour]
+	if hourAdded {
+		v, err := strconv.Atoi(result[hourIndex].Value)
+		if err != nil {
+			return "", ErrInvalidDateFormat
+		}
+		if v < 0 || v > 24 {
+			return "", ErrInvalidDateFormat
+		}
+	}
+	minsIndex, minsAdded := componentsMap[ctMin]
+	if minsAdded {
+		v, err := strconv.Atoi(result[minsIndex].Value)
+		if err != nil {
+			return "", ErrInvalidDateFormat
+		}
+		if v < 0 || v > 59 {
+			return "", ErrInvalidDateFormat
+		}
+	}
+	secIndex, secAdded := componentsMap[ctSec]
+	if secAdded {
+		v, err := strconv.Atoi(result[secIndex].Value)
+		if err != nil {
+			return "", ErrInvalidDateFormat
+		}
+		if v < 0 || v > 59 {
+			return "", ErrInvalidDateFormat
+		}
+	}
 
 	return d.goFmt(result), nil
 }
